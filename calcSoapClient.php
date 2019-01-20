@@ -41,7 +41,7 @@ try{
 			case 'tan':	$result = $clienteSOAP->tangent($num1); break;
 			default: print "no enough data";break;
 		}
-		printf("<h2>Result: %.3f </h2>", $result);
+		print "<h2>Result: $result</h2>";
 	}
 
 
