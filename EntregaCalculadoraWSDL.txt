@@ -1,0 +1,6 @@
+
+- Calculadora usando wsdl (clases)
+	https://github.com/microkom/calculatorSoapPHP/tree/usingClasses
+
+- Calculadora usando wsdl (sin clases)
+	https://github.com/microkom/calculatorSoapPHP/
