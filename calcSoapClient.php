@@ -1,5 +1,4 @@
 <?php
-//var_dump($_POST);
 
 try{
 	$clienteSOAP = new SoapClient('calculator.wsdl');
@@ -42,7 +41,7 @@ try{
 			case 'tan':	$result = $clienteSOAP->tangent($num1); break;
 			default: print "no enough data";break;
 		}
-		print $result;
+		printf("<h2>Result: %.3f </h2>", $result);
 	}
 
 

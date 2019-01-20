@@ -146,7 +146,7 @@
 
 	<service name="calculatorService">
 		<port name="calculatorPort" binding="tns:calculatorBinding">
-			<soap:address location="http://localhost/daw2/calculatorSoapPHP/calcSoapServer.php" />
+			<soap:address location="http://localhost/daw2/calculatorSoapPHP/serverEndpoint.php" />
 		</port>
 	</service>
 </definitions>

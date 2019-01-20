@@ -16,6 +16,7 @@
 			<legend>SOAP form calculator exercise using WSDL</legend>
 			<form action="calcSoapClient.php" method="post">
 
+				<!--num1-->
 				<input type="text" name="num1" value="">
 
 				<!-- Operation selector form-->
@@ -26,8 +27,9 @@
 					<option value="div">/</option>
 				</select>
 
+				<!--num2-->
 				<input type="text" name="num2" >
-				
+
 				<input type="submit"   value="result">
 			</form>
 
@@ -43,6 +45,7 @@
 					<option value="tan">tangent</option>
 				</select>
 
+				<!--num1-->
 				<input type="text" name="num1" >
 				<input type="submit"   value="result">
 			</form>
