@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<definitions name="calculatorService" 
+			 targetNamespace="urn:calculator"
+			 xmlns:tns="urn:calculator"
+			 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			 xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+			 xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+			 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+			 xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+	<message name="calculatorQuery">
+		<part name="operando1" type="xsd:float" />
+		<part name="operando2" type="xsd:float" />
+	</message>
+
+	<message name="calculatorResponse">
+		<part name="respuesta" type="xsd:float" />
+	</message>
+
+	<portType name="calculatorPort">
+		<operation name="addition">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="subtract">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="multiplication">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="division">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="squareRoot">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="sine">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="cosine">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+		<operation name="tangent">
+			<input message="tns:calculatorQuery" />
+			<output message="tns:calculatorResponse" />
+		</operation>
+	</portType>
+
+	<binding name="calculatorBinding" type="tns:calculatorPort">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="addition">
+			<soap:operation soapAction="urn:calculator#addition" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="subtract">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+		<operation name="multiplication">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+		<operation name="division">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+		<operation name="squareRoot">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+		<operation name="sine">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+		<operation name="cosine">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+		<operation name="tangent">
+			<soap:operation soapAction="urn:calculator#subtract" />
+			<input>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:calculator"
+						   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />       
+			</output>
+		</operation>
+	</binding>
+
+	<service name="calculatorService">
+		<port name="calculatorPort" binding="tns:calculatorBinding">
+			<soap:address location="http://localhost/daw2/calculatorSoapPHP/calcSoapServer.php" />
+		</port>
+	</service>
+</definitions>
