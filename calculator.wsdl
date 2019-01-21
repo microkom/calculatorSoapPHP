@@ -9,8 +9,8 @@
 			 xmlns="http://schemas.xmlsoap.org/wsdl/">
 
 	<message name="calculatorQuery">
-		<part name="operando1" type="xsd:float" />
-		<part name="operando2" type="xsd:float" />
+		<part name="num1" type="xsd:float" />
+		<part name="num2" type="xsd:float" />
 	</message>
 
 	<message name="calculatorResponse">
